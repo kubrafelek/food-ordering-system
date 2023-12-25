@@ -6,16 +6,11 @@ import com.food.ordering.system.domain.valueobject.OrderId;
 import com.food.ordering.system.order.service.domain.valueobject.OrderItemId;
 
 public class OrderItem extends BaseEntity<OrderItemId> {
-
     private OrderId orderId;
     private final Product product;
     private final int quantity;
     private final Money price;
-    private final Money subtotal;
-
-    public static Builder builder() {
-        return new Builder();
-    }
+    private final Money subTotal;
 
     void initializeOrderItem(OrderId orderId, OrderItemId orderItemId) {
         this.orderId = orderId;
@@ -25,7 +20,7 @@ public class OrderItem extends BaseEntity<OrderItemId> {
     boolean isPriceValid() {
         return price.isGreaterThanZero() &&
                 price.equals(product.getPrice()) &&
-                price.multiply(quantity).equals(subtotal);
+                price.multiply(quantity).equals(subTotal);
     }
 
     private OrderItem(Builder builder) {
@@ -33,8 +28,13 @@ public class OrderItem extends BaseEntity<OrderItemId> {
         product = builder.product;
         quantity = builder.quantity;
         price = builder.price;
-        subtotal = builder.subtotal;
+        subTotal = builder.subTotal;
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
 
     public OrderId getOrderId() {
         return orderId;
@@ -52,8 +52,8 @@ public class OrderItem extends BaseEntity<OrderItemId> {
         return price;
     }
 
-    public Money getSubtotal() {
-        return subtotal;
+    public Money getSubTotal() {
+        return subTotal;
     }
 
     public static final class Builder {
@@ -61,13 +61,9 @@ public class OrderItem extends BaseEntity<OrderItemId> {
         private Product product;
         private int quantity;
         private Money price;
-        private Money subtotal;
+        private Money subTotal;
 
         private Builder() {
-        }
-
-        public static Builder builder() {
-            return new Builder();
         }
 
         public Builder orderItemId(OrderItemId val) {
@@ -90,8 +86,8 @@ public class OrderItem extends BaseEntity<OrderItemId> {
             return this;
         }
 
-        public Builder subtotal(Money val) {
-            subtotal = val;
+        public Builder subTotal(Money val) {
+            subTotal = val;
             return this;
         }
 

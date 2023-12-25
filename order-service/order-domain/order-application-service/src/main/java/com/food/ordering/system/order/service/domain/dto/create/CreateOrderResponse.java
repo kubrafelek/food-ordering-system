@@ -1,6 +1,6 @@
 package com.food.ordering.system.order.service.domain.dto.create;
 
-import com.food.ordering.system.domain.valueobject.OrderStatues;
+import com.food.ordering.system.domain.valueobject.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,13 +12,10 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 public class CreateOrderResponse {
-
     @NotNull
-    private final UUID orderTrackingId;
-
+    private final UUID orderTackingId;
     @NotNull
-    private final OrderStatues orderStatues;
-
+    private final OrderStatus orderStatus;
     @NotNull
-    private final UUID message;
+    private final String message;
 }
