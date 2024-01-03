@@ -3,7 +3,7 @@
 __consumer_offsets 13 0
 __consumer_offsets 46 0
 restaurant-approval-request 1 0
-__consumer_offsets 9 0
+__consumer_offsets 9 2
 __consumer_offsets 42 0
 __consumer_offsets 21 0
 __consumer_offsets 17 0
@@ -18,7 +18,7 @@ __consumer_offsets 1 0
 __consumer_offsets 34 0
 customer 1 0
 __consumer_offsets 16 0
-_schemas 0 0
+_schemas 0 2
 __consumer_offsets 45 0
 __consumer_offsets 12 0
 __consumer_offsets 41 0
@@ -27,7 +27,7 @@ __consumer_offsets 24 0
 __consumer_offsets 20 0
 __consumer_offsets 49 0
 __consumer_offsets 0 0
-__consumer_offsets 29 0
+__consumer_offsets 29 2
 __consumer_offsets 25 0
 __consumer_offsets 8 0
 __consumer_offsets 37 0

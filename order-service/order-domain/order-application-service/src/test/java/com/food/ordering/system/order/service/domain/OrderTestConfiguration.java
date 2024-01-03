@@ -47,4 +47,5 @@ public class OrderTestConfiguration {
     public OrderDomainService orderDomainService() {
         return new OrderDomainServiceImpl();
     }
+
 }
