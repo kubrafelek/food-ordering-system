@@ -11,8 +11,9 @@
 
     <artifactId>infrastructure</artifactId>
     <packaging>pom</packaging>
-
     <modules>
+        <module>saga</module>
+        <module>outbox</module>
         <module>kafka</module>
     </modules>
 
